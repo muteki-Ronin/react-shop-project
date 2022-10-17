@@ -1,7 +1,7 @@
 function Cart({ quantity = 0 }) {
   return (
     <div className="cart light-blue lighten-1 white-text">
-      {quantity ? (
+      {!quantity ? (
         <i className="material-icons">remove_shopping_cart</i>
       ) : (
         <>

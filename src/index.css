@@ -22,13 +22,24 @@ nav {
   gap: 1rem;
 }
 
-.price-span {
-  font-size: 1.8rem;
-}
-
 .card { 
   display: flex;
   flex-direction: column;
+}
+
+.c-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+}
+
+.card-description {
+  font-size: 1.2rem; 
+  font-style: italic;
+}
+
+.price-span {
+  font-size: 1.6rem;
 }
 
 .card-content {
