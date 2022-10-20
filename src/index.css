@@ -100,3 +100,9 @@ nav {
     opacity: 1;
   }
 }
+
+.basket-quantity-ico {
+  cursor:pointer;
+  color: #29b6f6;
+  vertical-align: middle;
+}

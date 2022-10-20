@@ -40,6 +40,36 @@ function Main() {
     }
   };
 
+  const incQuantityBasketGoods = (itemId) => {
+    const newOrder = order.map((element) => {
+      if (element.mainId === itemId) {
+        const newQuantity = element.quantity + 1;
+        return {
+          ...element,
+          quantity: newQuantity,
+        };
+      } else {
+        return element;
+      }
+    });
+    setOrder(newOrder);
+  };
+
+  const decQuantityBasketGoods = (itemId) => {
+    const newOrder = order.map((element) => {
+      if (element.mainId === itemId) {
+        const newQuantity = element.quantity - 1;
+        return {
+          ...element,
+          quantity: newQuantity >= 0 ? newQuantity : 0,
+        };
+      } else {
+        return element;
+      }
+    });
+    setOrder(newOrder);
+  };
+
   const removeFromBasket = (itemId) => {
     const newOrder = order.filter((element) => element.mainId !== itemId);
     setOrder(newOrder);
@@ -74,6 +104,8 @@ function Main() {
         <BasketList
           order={order}
           handleBasketShow={handleBasketShow}
+          incQuantityBasketGoods={incQuantityBasketGoods}
+          decQuantityBasketGoods={decQuantityBasketGoods}
           removeFromBasket={removeFromBasket}
         />
       )}
