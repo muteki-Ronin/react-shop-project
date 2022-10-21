@@ -1,4 +1,4 @@
-# **[REACT FORTNITE-SHOP PROJECT](https://github.com/muteki-Ronin/react-shop-project)**
+# **[REACT FORTNITE-SHOP PROJECT](https://muteki-Ronin.github.io/react-shop-project)**
 
 ## **[React](https://ru.reactjs.org/)**
 
