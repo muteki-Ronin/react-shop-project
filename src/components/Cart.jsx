@@ -1,7 +1,7 @@
 function Cart({ quantity = 0, handleBasketShow = Function.prototype }) {
   return (
     <div
-      className="cart light-blue lighten-1 white-text"
+      className="cart green accent-3"
       onClick={handleBasketShow}
     >
       {!quantity ? (

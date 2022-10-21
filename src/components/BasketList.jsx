@@ -26,9 +26,12 @@ function BasketList({
           />
         ))
       ) : (
-        <li className="collection-item">Корзина пуста</li>
+        <li className="collection-item">Сart is empty</li>
       )}
-      <li className="collection-item active light-blue lighten-1">TOTAL PRICE: {totalPrice} UAH</li>
+      <li className="collection-item active light-blue lighten-1">
+        TOTAL PRICE: {totalPrice} UAH
+          <button className="btn red accent-3 basket-btn">Pay</button>
+      </li>
       <i className="material-icons basket-close" onClick={handleBasketShow}>
         close
       </i>

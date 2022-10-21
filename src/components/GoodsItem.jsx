@@ -17,7 +17,7 @@ function GoodsItem({
       </div>
       <div className="card-action">
         <button
-          className="btn light-blue lighten-1"
+          className="btn green accent-3"
           onClick={() =>
             addToCart({
               mainId,
