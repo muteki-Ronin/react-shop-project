@@ -2,12 +2,16 @@
 import Header from "./layout/Header";
 import Main from "./layout/Main";
 import Footer from "./layout/Footer";
+// CONTEXT
+import { ContextProvider } from "./context";
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <ContextProvider>
+        <Main />
+      </ContextProvider>
       <Footer />
     </>
   );
