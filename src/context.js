@@ -16,6 +16,10 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
   const [value, dispatch] = useReducer(reducer, initialState);
 
+  value.getGoods = (data) => {
+    dispatch({type: "GET_GOODS", payload: data})
+  }
+
   value.addToBasket = (item) => {
     dispatch({ type: "ADD_TO_BASKET", payload: item });
   };

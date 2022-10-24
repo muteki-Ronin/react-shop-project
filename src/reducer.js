@@ -1,5 +1,11 @@
 export function reducer(state, { type, payload }) {
   switch (type) {
+    case "GET_GOODS":
+      return {
+        ...state,
+        goods: payload || [],
+        loading: false,
+      };
     case "ADD_TO_BASKET": {
       const itemIndex = state.order.findIndex(
         (orderItem) => orderItem.mainId === payload.mainId
@@ -30,7 +36,7 @@ export function reducer(state, { type, payload }) {
         alertName: payload.displayName,
       };
     }
-    case "TOGGLE_BASKET": 
+    case "TOGGLE_BASKET":
       return {
         ...state,
         isBasketShow: !state.isBasketShow,

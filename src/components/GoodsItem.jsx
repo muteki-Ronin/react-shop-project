@@ -1,11 +1,16 @@
+// CORE
+import { useContext } from "react";
+// CONTEXT
+import { ShopContext } from "../context";
+
 function GoodsItem({
   mainId,
   displayName,
   displayDescription,
   price,
   displayAssets,
-  addToCart = Function.prototype,
 }) {
+  const { addToBasket } = useContext(ShopContext);
   return (
     <div className="card">
       <div className="card-image">
@@ -19,7 +24,7 @@ function GoodsItem({
         <button
           className="btn green accent-3"
           onClick={() =>
-            addToCart({
+            addToBasket({
               mainId,
               displayName,
               price,
